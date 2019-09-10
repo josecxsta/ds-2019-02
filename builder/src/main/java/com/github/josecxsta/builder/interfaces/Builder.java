@@ -2,8 +2,10 @@ package com.github.josecxsta.builder.interfaces;
 
 import com.github.josecxsta.builder.domain.IceCream;
 
-public interface Builder {
+// TODO É necessária?
+// TODO a interface deveria ser conforme abaixo...
+public interface Builder<T> {
 	
-	public IceCream build();
+	T build();
 	
 }
