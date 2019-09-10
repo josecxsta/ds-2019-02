@@ -12,6 +12,8 @@ import com.github.josecxsta.builder.interfaces.Builder;
  */
 public class IceCreamBuilder implements Builder {
 
+	// TODO deveria ser um Enum, por exemplo, Flavour.
+	// TODO deveria ser um Set, list permite duplicidade. 
 	private List<String> flavours = new ArrayList<>();
 	private List<String> toppings = new ArrayList<>();
 	private List<String> fruits = new ArrayList<>();
