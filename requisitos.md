@@ -13,7 +13,6 @@ não é necessário usar o mesmo serviço indefinidamente após feita sua opçã
 - R5 Deve ser possível recuperar o conteúdo do arquivo F.
 - R6 Deve ser possível Remover o arquivo F. 
 - R7 Deve ser possível atualizar o conteúdo do arquivo F.
-- R8 Deve se assemelhar o máximo com um sistema de diretórios de um SO.
 
 
 ## Notas
