@@ -17,6 +17,7 @@ public class IceCreamBuilder implements Builder {
 	private List<String> fruits = new ArrayList<>();
 	private boolean vegan = false;
 	
+	// TODO documentar que não há elemento obrigatório.
 	public IceCreamBuilder() {
 		
 	}
@@ -62,18 +63,22 @@ public class IceCreamBuilder implements Builder {
 		return ic;
 	}
 
+	// TODO deveria estar na classe ICeCream (não faz sentido aqui).
 	public List<String> getFlavours() {
 		return flavours;
 	}
 
+	// TODO idem do anterior
 	public List<String> getToppings() {
 		return toppings;
 	}
 	
+	// TODO idem do anterior
 	public List<String> getFruits() {
 		return fruits;
 	}
 
+	// TODO idem do anterior
 	public boolean isVegan() {
 		return vegan;
 	}
