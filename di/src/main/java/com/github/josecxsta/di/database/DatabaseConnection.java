@@ -1,4 +1,4 @@
-package com.github.josecxsta.singleton.database;
+package com.github.josecxsta.di.database;
 
 import java.util.List;
 

@@ -4,7 +4,7 @@
  * Creative Commons Attribution 4.0 International License.
  */
 
-package com.github.josecxsta.singleton.database;
+package com.github.josecxsta.di.database;
 
 import org.junit.jupiter.api.Test;
 

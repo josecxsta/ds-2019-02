@@ -1,6 +1,6 @@
-package com.github.josecxsta.singleton.application;
+package com.github.josecxsta.di.application;
 
-import com.github.josecxsta.singleton.database.DatabaseConnection;
+import com.github.josecxsta.di.database.DatabaseConnection;
 
 
 /**
