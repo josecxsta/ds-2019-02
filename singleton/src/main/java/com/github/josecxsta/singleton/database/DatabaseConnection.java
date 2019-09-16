@@ -10,8 +10,7 @@ public class DatabaseConnection {
     /**
      * Instância de DatabaseConnection.
      */
-    private static final DatabaseConnection CONNECTION = newInstance();
-
+    private static DatabaseConnection CONNECTION = null;
 
     /**
      * Construtor privado para evitar mais instanciações.
@@ -24,6 +23,12 @@ public class DatabaseConnection {
      * Obtém a instância única de DatabaseConnection.
      */
     public static DatabaseConnection getInstance() {
+        if (CONNECTION == null) {
+            // TODO vamos tentar pela primeira vez ou
+            // TODO vamos tentar novamente, afinal, como desistir desta conexão?
+            CONNECTION = newInstance();
+        }
+
         return CONNECTION;
     }
 
@@ -31,7 +36,13 @@ public class DatabaseConnection {
      * Instancia DatabaseConnection por uma única vez.
      */
     private static DatabaseConnection newInstance() {
-        return new DatabaseConnection();
+        try {
+            return new DatabaseConnection();
+        } catch (Throwable x) {
+            // FIXME substituir throwable por exceção específica
+            // FIXME fazer registro em log
+            //  Muitas situações excepcionais podem ocorrer
+            return null;
+        }
     }
-
 }
