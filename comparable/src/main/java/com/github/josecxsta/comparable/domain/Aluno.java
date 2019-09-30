@@ -14,7 +14,7 @@ class Aluno implements Comparable<Aluno> {
         return nome;
     }
 
-    public String getNome() {
+    String getNome() {
         return nome;
     }
 

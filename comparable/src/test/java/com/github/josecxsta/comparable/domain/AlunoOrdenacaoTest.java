@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class AlunoOrdenacaoTest {
 
     @Test
-    public void ordenados() {
+    void ordenados() {
         List<Aluno> alunos = new ArrayList<>();
 
         alunos.add(new Aluno("Pedro"));
@@ -25,7 +25,7 @@ class AlunoOrdenacaoTest {
     }
 
     @Test
-    public void ordenacaoPeloTamanhoDoNome() {
+    void ordenacaoPeloTamanhoDoNome() {
         List<Aluno> alunos = new ArrayList<>();
         alunos.add(new Aluno("Aparecida"));
         alunos.add(new Aluno("Carla"));
