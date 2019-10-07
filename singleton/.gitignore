@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Visual Code
 .project
 .vscode/
@@ -146,3 +147,6 @@ local.properties
 
 # TeXlipse plugin
 .texlipse
+=======
+/target/
+>>>>>>> 83f9792aa3f9ccd695ebd8590c03875efba086a3

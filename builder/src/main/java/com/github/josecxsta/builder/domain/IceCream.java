@@ -17,6 +17,9 @@ public class IceCream {
 	private boolean vegan;
 	
 	/**
+	 * TODO não é usual o Builder "fora" da classe. Você deve possuir um bom motivo!
+	 * TODO public? Isto não é "quebrar" o que chamamos de information hiding?
+	 
 	 * Construtor privado para utilização do builder
 	 * @param iceCreamBuild {@link IceCreamBuilder}
 	 */
@@ -56,5 +59,7 @@ public class IceCream {
     private String une(List<String> lista) {
         return String.join(" ", lista);
     }
+	
+	// TODO faltam os métodos get....
 	
 }

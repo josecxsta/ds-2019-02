@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-=======
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
->>>>>>> 83f9792aa3f9ccd695ebd8590c03875efba086a3
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.josecxsta</groupId>
@@ -76,11 +70,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.mainClass>
-<<<<<<< HEAD
-            com.github.josecxsta.exemplo.application.console.ProgramaCalendario
-=======
-            com.github.josecxsta.singleton.application.App
->>>>>>> 83f9792aa3f9ccd695ebd8590c03875efba086a3
+            com.github.josecxsta.di.application.App
         </project.mainClass>
 
         <tools.dir>${project.basedir}/tools</tools.dir>
@@ -91,16 +81,6 @@
     </properties>
 
     <dependencies>
-<<<<<<< HEAD
-             
-    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.6.RELEASE</version>
-        <type>pom</type>
-    </dependency>             
-=======
 
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
         <dependency>
@@ -109,7 +89,6 @@
             <version>2.1.6.RELEASE</version>
             <type>pom</type>
         </dependency>
->>>>>>> 83f9792aa3f9ccd695ebd8590c03875efba086a3
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -193,13 +172,8 @@
         <!-- Define o nome do arquivo a ser gerado (.jar é acrescentada) -->
         <finalName>exemplo</finalName>
 
-<<<<<<< HEAD
-        <plugins>     
-                 
-=======
         <plugins>
 
->>>>>>> 83f9792aa3f9ccd695ebd8590c03875efba086a3
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -271,11 +245,7 @@
             </plugin>
 
             <!-- FIM DE ATUALIZACAO DE PLUGINS -->
-<<<<<<< HEAD
-                 
-=======
 
->>>>>>> 83f9792aa3f9ccd695ebd8590c03875efba086a3
             <!-- mvn checkstyle:checkstyle -->
             <!-- mvn checkstyle:check      -->
             <plugin>
@@ -351,11 +321,7 @@
                 <version>3.8.1</version>
             </plugin>
 
-<<<<<<< HEAD
-             <!-- PMD                  -->
-=======
             <!-- PMD                  -->
->>>>>>> 83f9792aa3f9ccd695ebd8590c03875efba086a3
             <!-- mvn pmd:pmd          -->
             <!-- mvn pmd:check        -->
             <!-- target/site/pmd.html -->
@@ -395,11 +361,7 @@
                         <goals>
                             <goal>java</goal>
                         </goals>
-<<<<<<< HEAD
-                </execution>
-=======
                     </execution>
->>>>>>> 83f9792aa3f9ccd695ebd8590c03875efba086a3
                 </executions>
                 <configuration>
                     <mainClass>${project.mainClass}</mainClass>
@@ -580,11 +542,7 @@
             <id>api</id>
             <build>
                 <finalName>api</finalName>
-<<<<<<< HEAD
-                <plugins>            
-=======
                 <plugins>
->>>>>>> 83f9792aa3f9ccd695ebd8590c03875efba086a3
                     <plugin>
                         <groupId>org.springframework.boot</groupId>
                         <artifactId>spring-boot-maven-plugin</artifactId>
