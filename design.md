@@ -2,13 +2,11 @@
 
 ### Bucket
 
-Buckets são os discos básicos que armazenam dados.
+Buckets são os discos que armazenam dados. Cada intervalo deve possuir um nome global exclusivo em seu serviço de armazenamento.
 
 ### FileObject
 
-FileObjects são os dados individuais que você armazena no Cloud Storage. Não há limite no número de objetos que você crie em um intervalo.
-
-Os FileObjects têm dois componentes: dados e metadados. Os dados geralmente são um arquivo que você quer armazenar no Cloud Storage. Metadados são uma coleção de pares de nome-valor que descrevem várias qualidades do FileObject.
+FileObjects são os dados individuais que podem ser armazenados nos Buckets. Os FileObjects têm dois componentes: dados e metadados. Os dados geralmente são um arquivo que você quer armazenar no Bucket. Metadados são uma coleção de pares de nome-valor que descrevem várias qualidades do FileObject.
 
 
 ## Design detalhado do projeto
