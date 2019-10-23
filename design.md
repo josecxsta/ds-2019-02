@@ -2,29 +2,47 @@
 
 ### Bucket
 
-Buckets são os discos que armazenam dados. Cada intervalo deve possuir um nome global exclusivo em seu serviço de armazenamento.
+**Buckets** são os discos que armazenam dados. Cada intervalo deve possuir um nome global exclusivo em seu serviço de armazenamento.
 
 ### FileObject
 
-FileObjects são os dados individuais que podem ser armazenados nos Buckets. Os FileObjects têm dois componentes: dados e metadados. Os dados geralmente são um arquivo que você quer armazenar no Bucket. Metadados são uma coleção de pares de nome-valor que descrevem várias qualidades do FileObject.
+**FileObjects** são os dados individuais que podem ser armazenados nos Buckets. Os FileObjects têm dois componentes: dados e metadados. Os dados geralmente são um arquivo que você quer armazenar no Bucket. Metadados são uma coleção de pares de nome-valor que descrevem várias qualidades do FileObject.
 
 
 ## Design detalhado do projeto
 
-- D1: Crie a interface StorageService com os métodos listBuckets, createBucket.
+- Crie a interface **StorageService**.
 
-- D2: Crie classes GoogleStorageService e AmazonStorageService que implementam a interface StorageService.
+- Crie classes **GoogleStorageService** e **AmazonStorageService** que implementam a interface StorageService;
 
-- D3: Crie classe StorageCredential que armazenará a chave ou token da conta de serviço do serviço de armazenamento, além do host para requisições
+- (!) Crie classe StorageCredential que armazenará a chave ou token da conta de serviço do serviço de armazenamento, além do host para requisições;
 
-- D4: Utilize o Google Cloud Java Client for Storage
+- Crie a interface **BucketService** com os métodos getAll(), get(), delete(), create() e listFiles().
 
-- D5: Utilize o AWS SDK para Java
+- Crie a classe **FileObjectService** com os métodos  send(), get(), update() e delete();
 
-- D6: Crie a classe BucketService com os métodos listFiles, sendFile, getFile, updateFile, deleteFile
+- Utilize o **Google Cloud Client for Java** para fazer requisições ao Google Cloud Storage (https://github.com/googleapis/google-cloud-java/tree/master/google-cloud-clients/google-cloud-storage);
 
-- D7: Utilize o GSON para serializar e desserializar objetos JSON
+- Crie a classe **UnifiedApi** que terá os métodos bucket(), que instanciará BucketService; fileObject(), que instanciará FileObject. Essa classe deverá ter um construtor que recebe as credenciais para o acesso ao serviço de armazenamento.
+Exemplo: 
 
-- D8: Utilize o Log4j para registrar todos os logs relevantes da aplicação
+```
+UnifiedApi uApi = new UnifiedApi(credentials);
+ArrayList<Bucket> buckets = uApi.bucket().getAll();
+ ```
 
-- D9: Faça a discriminação do serviço de armazenamento através de um header de nome StorageService ("GOOGLE" e "AMAZON" são os únicos aceitos por enquanto)
+- (?) Crie a interface **Bucket** com os atributos: name.
+
+- (?) Crie a interface **FileObject** com os atributos:.
+
+- Utilize o padrão de projeto Factory na criação da interface **FactoryBucket**
+
+- Utilize o padrão de projeto Factory na criação da interface **FactoryFileObject** 
+
+- Crie os packages google e amazon para inserir neles as classes que vão implementar as interfaces de Bucket, FileObject, FactoryBucket e FactoryFileObject.
+
+- Utilize o **AWS SDK Java** para fazer requisições para o Amazon S3 (https://github.com/aws/aws-sdk-java);
+
+- Utilize o **GSON** para serializar objetos JSON para enviar aos serviços de armazenamento (https://github.com/google/gson);
+
+- Utilize o **Log4j** para registrar todos os logs relevantes da aplicação;
