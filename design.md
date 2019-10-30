@@ -21,27 +21,27 @@
 
 - Crie a classe **FileObjectService** com os métodos  send(), get(), update() e delete();
 
-- Utilize o **Google Cloud Client for Java** para fazer requisições ao Google Cloud Storage (https://github.com/googleapis/google-cloud-java/tree/master/google-cloud-clients/google-cloud-storage);
+- Utilize o [**Google Cloud Client for Java**](https://github.com/googleapis/google-cloud-java/tree/master/google-cloud-clients/google-cloud-storage) para fazer requisições ao Google Cloud Storage . [Documentação referente](https://cloud.google.com/storage/docs/reference/libraries#client-libraries-install-java).;
+
+- Utilize o [**AWS SDK Java**](https://github.com/aws/aws-sdk-java) para fazer requisições para o Amazon S3. [Documentação referente](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/examples-s3.html).;
 
 - Crie a classe **UnifiedApi** que terá os métodos bucket(), que instanciará BucketService; fileObject(), que instanciará FileObject. Essa classe deverá ter um construtor que recebe as credenciais para o acesso ao serviço de armazenamento.
-Exemplo: 
+Exemplo:
 
 ```
 UnifiedApi uApi = new UnifiedApi(credentials);
 ArrayList<Bucket> buckets = uApi.bucket().getAll();
  ```
 
-- (?) Crie a interface **Bucket** com os atributos: name.
+- (?) Crie a interface **Bucket** com os atributos: name, location.
 
-- (?) Crie a interface **FileObject** com os atributos:.
+- (?) Crie a interface **FileObject** com os atributos: key, versionId, value, metadata.
 
 - Utilize o padrão de projeto Factory na criação da interface **FactoryBucket**
 
-- Utilize o padrão de projeto Factory na criação da interface **FactoryFileObject** 
+- Utilize o padrão de projeto Factory na criação da interface **FactoryFileObject**
 
 - Crie os packages google e amazon para inserir neles as classes que vão implementar as interfaces de Bucket, FileObject, FactoryBucket e FactoryFileObject.
-
-- Utilize o **AWS SDK Java** para fazer requisições para o Amazon S3 (https://github.com/aws/aws-sdk-java);
 
 - Utilize o **GSON** para serializar objetos JSON para enviar aos serviços de armazenamento (https://github.com/google/gson);
 
