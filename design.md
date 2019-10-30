@@ -15,13 +15,13 @@
 
 - Crie classes **GoogleStorageService** e **AmazonStorageService** que implementam a interface StorageService;
 
-- (!) Crie classe StorageCredential que armazenará a chave ou token da conta de serviço do serviço de armazenamento, além do host para requisições;
+- Para autenticar nos serviços de armazenamento é necessário salvar variáveis de ambiente com algumas chaves. No caso do Google é necessário definir a variável de ambiente `GOOGLE_APPLICATION_CREDENTIALS` com o caminho para o arquivo json contendo a chave da conta de serviço que possui permissões no Google Cloud Storage. No caso do serviço da Amazon, é necessário definir as seguintes variáveis de ambiente: `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` com dados da conta de serviço.
 
-- Crie a interface **BucketService** com os métodos getAll(), get(), delete(), create() e listFiles().
+- Crie a interface **BucketService** com os métodos getAll(): Bucket[], get(name: String): Bucket, delete(name: String): void, create(name: String): Bucket e listFiles(): FileObject[].
 
 - Crie a classe **FileObjectService** com os métodos  send(), get(), update() e delete();
 
-- Utilize o [**Google Cloud Client for Java**](https://github.com/googleapis/google-cloud-java/tree/master/google-cloud-clients/google-cloud-storage) para fazer requisições ao Google Cloud Storage . [Documentação referente](https://cloud.google.com/storage/docs/reference/libraries#client-libraries-install-java).;
+- Utilize o [**Google Cloud Client for Java**](https://github.com/googleapis/google-cloud-java/tree/master/google-cloud-clients/google-cloud-storage) para fazer requisições ao Google Cloud Storage. [Documentação referente](https://cloud.google.com/storage/docs/reference/libraries#client-libraries-install-java).;
 
 - Utilize o [**AWS SDK Java**](https://github.com/aws/aws-sdk-java) para fazer requisições para o Amazon S3. [Documentação referente](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/examples-s3.html).;
 
@@ -43,6 +43,6 @@ ArrayList<Bucket> buckets = uApi.bucket().getAll();
 
 - Crie os packages google e amazon para inserir neles as classes que vão implementar as interfaces de Bucket, FileObject, FactoryBucket e FactoryFileObject.
 
-- Utilize o **GSON** para serializar objetos JSON para enviar aos serviços de armazenamento (https://github.com/google/gson);
+- Utilize o [**GSON**](https://github.com/google/gson) para serializar objetos JSON para enviar aos serviços de armazenamento;
 
 - Utilize o **Log4j** para registrar todos os logs relevantes da aplicação;
