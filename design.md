@@ -13,7 +13,7 @@
 
 - Crie o enum **Platforms** com os serviços de armazenamento (Google, Amazon);
 
-- Crie a classe **UnifiedApi** que terá os métodos bucket(), que instanciará BucketService. Essa classe deverá ter um construtor que recebe um Platforms com o nome do serviço para o acesso ao serviço de armazenamento.
+- Crie a classe **UnifiedApi** que terá os métodos bucket(), que instanciará um BucketService. Essa classe deverá ter um construtor que recebe um Platforms com o nome do serviço para o acesso ao serviço de armazenamento.
 Exemplo:
 
 ```
@@ -25,7 +25,7 @@ A classe UnifiedApi deve possuir um atributo storageService, do tipo StorageServ
 
 - Para autenticar nos serviços de armazenamento é necessário salvar variáveis de ambiente com algumas chaves. No caso do Google é necessário definir a variável de ambiente `GOOGLE_APPLICATION_CREDENTIALS` com o caminho para um arquivo .json contendo a chave da conta de serviço que possui permissões no Google Cloud Storage. No caso do serviço da Amazon, é necessário definir as seguintes variáveis de ambiente: `AWS_ACCESS_KEY_ID` e `AWS_SECRET_ACCESS_KEY` com dados da conta de serviço;
 
-- Crie a interface **StorageService** com um método que verifica as variáveis de ambiente para autenticação;
+- Crie a interface **StorageService** com um método que verifica as variáveis de ambiente para autenticação, utiliza um cliente para acesso a plataforma de armazenamento e possui como propriedades BucketService() e FileObjectService();
 
 - Crie classes **GoogleStorageService** e **AmazonStorageService** que implementam a interface StorageService;
 
