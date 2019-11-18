@@ -41,7 +41,7 @@ A classe UnifiedApi deve possuir um atributo storageService, do tipo StorageServ
 
 - Crie a interface **Bucket** com os atributos: name, location;
 
-- Crie a interface **FileObject** com os atributos: key, versionId, value, metadata;
+- Crie a interface **FileObject** com os atributos: key, versionId, value, metadata, size;
 
 - Utilize o padrão de projeto Factory na criação da interface **FactoryBucket**;
 
