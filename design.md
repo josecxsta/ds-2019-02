@@ -33,6 +33,8 @@ A classe UnifiedApi deve possuir um atributo storageService, do tipo StorageServ
 
 - Crie a classe **FileObjectService** com os métodos send(object: FileObject, bucket: Bucket), get(key: String, bucket: Bucket), update(key: String, bucket: Bucket, file: FileObject) e delete(key: String, bucket: Bucket);
 
+- Implementar um supplier para o listFiles no BucketService;
+
 - Utilize o [**Google Cloud Client for Java**](https://github.com/googleapis/google-cloud-java/tree/master/google-cloud-clients/google-cloud-storage) para fazer requisições ao Google Cloud Storage. [Documentação referente](https://cloud.google.com/storage/docs/reference/libraries#client-libraries-install-java);
 
 - Utilize o [**AWS SDK Java**](https://github.com/aws/aws-sdk-java) para fazer requisições para o Amazon S3. [Documentação referente](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/examples-s3.html);
